@@ -1,0 +1,70 @@
+#opacheader h1 {
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    color: #135875;
+    font-size: 4.5em; /*72 / 16*/
+    opacity: .8;
+    text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+.bookshelf a {
+    font-family: 'Righteous', cursive;
+    color: #df6862;
+    font-size: 1.5em;
+}
+
+#opacheader {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*media queries */
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+#branding a {
+    display: flex;
+    flex-direction: column;
+}
+
+#opacheader {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#opacheader img {
+ width:100%;
+
+}
+
+.bookshelf a {
+    font-family: 'Righteous', cursive;
+    color: #df6862;
+    font-size: 1.5em;
+    background: -webkit-radial-gradient(#ff8c00, #ffa500);
+background: radial-gradient(#df6862, #ff6a63);
+    background-color: rgba(0, 0, 0, 0);
+position: relative;
+color: white;
+position: relative;
+width: 205px;
+height: 50px;
+border: 1px solid currentColor;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.scroll-down, .scroll-down-left  {
+
+    margin-top: 0px;
+
+}
+
+}
