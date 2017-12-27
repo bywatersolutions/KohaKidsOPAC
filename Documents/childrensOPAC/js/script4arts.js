@@ -1,3 +1,15 @@
+
+$(document).ready(function() {
+$( '[id^=gbs-thumbnail1]').each(function( index ) {
+$(this).addClass('google-books');
+});
+
+$( '.google-books').each(function( index ) {
+if( $(this).is(':empty') ) { $(this).append('<img src="http://images.amazon.com/images/P/0439166233.01.TZZZZZZZ.jpg" alt="" class="item-thumbnail otherclass">');  }
+});
+
+});
+
 $(document).ready(function() {
 
 $(".pagination").after("<section id='fiction_controls'><span id='normal' class=' control_button fiction_button'><a href=''>Fiction</a></span><span id='normal' class='control_button nonfiction_button'><a href=''>Non-Fiction</a></span></section>")
@@ -46,6 +58,10 @@ for (var i = 0; i < queryStrings.length; i++) {
 });
 
 $(window).load(function(){
+
+  $( ".coverimages .no-image" ).each(function( index ) {
+  parent = $(this).parent(); $(parent).append('<img src="http://images.amazon.com/images/P/0899194990.01.TZZZZZZZ.jpg" alt="" class="item-thumbnail otherclass">');
+  });
 
 var h = document.querySelector('.item-thumbnail').naturalHeight; console.log(h);
 
@@ -304,7 +320,7 @@ $("#moresearches ul").append("<li> <a id='series_link' href='#'>Book Series</a><
 
 $("#moresearches ul").append("<li> <a id='popular_link' href='#'>Most Popular</a></li>");
 
-$("#results #moresearches #categories_link").attr("href", "http://michael.test.bywatersolutions.com");
+$("#results #moresearches #categories_link").attr("href", "http://cl.fourarts.bywatersolutions.com");
 
 
 $("#opac-detail #moresearches #categories_link").attr("href", "http://michael.test.bywatersolutions.com");
