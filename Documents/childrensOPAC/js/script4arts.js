@@ -8,9 +8,7 @@ $( '[id^=local-thumbnail]').each(function( index ) {
 $(this).addClass('local-books');
 });
 
-$( '.google-books').each(function( index ) { if ( $(this).children('img').length > 0 ) {
-     parent = $(this).parent(); $(parent).find('[id^=local-thumbnail]').hide();
-}  });
+
 
 $( '.google-books').each(function( index ) {
 if( $(this).is(':empty') ) { $(this).append('<img src="http://images.amazon.com/images/P/0439166233.01.TZZZZZZZ.jpg" alt="" class="item-thumbnail otherclass">');  }
@@ -22,6 +20,14 @@ $( '.google-books').each(function( index ) { if ( $(this).children('.no-image').
 
 $( '[id^=local-thumbnail]').each(function( index ) { if ( $(this).children('.no-image').length > 0 ) {
      $(this).append('<img src="http://images.amazon.com/images/P/0439166233.01.TZZZZZZZ.jpg" alt="" class="item-thumbnail otherclass">');
+}  });
+
+$( '.google-books').each(function( index ) { if ( $(this).children('img').length > 0 ) {
+     parent = $(this).parent(); $(parent).find('[id^=local-thumbnail]').hide();
+}  });
+
+$( '.google-books').each(function( index ) { if ( $(this).children('.no-image').length > 0 ) {
+     parent = $(this).parent(); $(parent).find('[id^=local-thumbnail]').hide();
 }  });
 
 });
