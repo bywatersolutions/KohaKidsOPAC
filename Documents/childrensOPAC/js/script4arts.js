@@ -37,14 +37,14 @@ for (var i = 0; i < queryStrings.length; i++) {
      $('.nonfiction_button a').attr('href', '/cgi-bin/koha/opac-search.pl?idx=kw&op=and&idx=kw&q=&op=and&idx=kw&q=&do=Search&branch_group_limit=branch%3ASOFACL&limit=mc-ccode%3ANFIC&q=' + qArray);
   }
 
-  if (window.location.href.indexOf("JFIC") > -1) {
+  if (window.location.href.indexOf("FIC") > -1) {
       $(".fiction_button").attr("id", "pressed");
       $(".fiction_and_non").attr("id", "normal");
       $(".nonfiction_button").attr("id", "normal");
 
   }
 
-  if (window.location.href.indexOf("JNF") > -1) {
+  if (window.location.href.indexOf("NFIC") > -1) {
       $(".fiction_button").attr("id", "normal");
       $(".fiction_and_non").attr("id", "normal");
       $(".nonfiction_button").attr("id", "pressed");
