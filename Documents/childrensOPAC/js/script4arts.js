@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+$(window).load(function() {
 $( '[id^=gbs-thumbnail1]').each(function( index ) {
 $(this).addClass('google-books');
 });
