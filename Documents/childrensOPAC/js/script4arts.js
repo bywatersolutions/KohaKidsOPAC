@@ -33,8 +33,8 @@ for (var i = 0; i < queryStrings.length; i++) {
  if (queryStrings[i].substring(0, 2) === 'q=') {
     qArray = queryStrings[i].substring(2).split('+');  $("#search_query").attr("value", qArray);
     console.log(qArray);
-    $('.fiction_button a').attr('href', '/cgi-bin/koha/opac-search.pl?idx=kw&op=and&idx=kw&q=&op=and&idx=kw&q=&do=Search&limit=mc-loc%3AJFIC&q=' + qArray);
-     $('.nonfiction_button a').attr('href', '/cgi-bin/koha/opac-search.pl?idx=kw&op=and&idx=kw&q=&op=and&idx=kw&q=&do=Search&limit=mc-loc%3AJNF&q=' + qArray);
+    $('.fiction_button a').attr('href', '/cgi-bin/koha/opac-search.pl?idx=kw&op=and&idx=kw&q=&op=and&idx=kw&q=&do=Search&branch_group_limit=branch%3ASOFACL&limit=mc-ccode%3AFIC&q=' + qArray);
+     $('.nonfiction_button a').attr('href', '/cgi-bin/koha/opac-search.pl?idx=kw&op=and&idx=kw&q=&op=and&idx=kw&q=&do=Search&branch_group_limit=branch%3ASOFACL&limit=mc-ccode%3ANFIC&q=' + qArray);
   }
 
   if (window.location.href.indexOf("JFIC") > -1) {
