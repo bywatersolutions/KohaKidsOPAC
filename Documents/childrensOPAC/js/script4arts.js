@@ -4,6 +4,9 @@ $( '[id^=gbs-thumbnail1]').each(function( index ) {
 $(this).addClass('google-books');
 });
 
+$( '.google-books').each(function( index ) {
+if( $(this).is(':empty') ) { $(this).append('<img src="http://images.amazon.com/images/P/0439166233.01.TZZZZZZZ.jpg" alt="" class="item-thumbnail otherclass">');  }
+});
 
 });
 
@@ -56,9 +59,7 @@ for (var i = 0; i < queryStrings.length; i++) {
 
 $(window).load(function(){
 
-  $( ".coverimages .no-image" ).each(function( index ) {
-  parent = $(this).parent(); $(parent).append('<img src="http://images.amazon.com/images/P/0899194990.01.TZZZZZZZ.jpg" alt="" class="item-thumbnail otherclass">');
-  });
+
 
 var h = document.querySelector('.item-thumbnail').naturalHeight; console.log(h);
 
