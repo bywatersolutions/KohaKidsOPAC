@@ -4,9 +4,6 @@ $( '[id^=gbs-thumbnail1]').each(function( index ) {
 $(this).addClass('google-books');
 });
 
-$( '.google-books').each(function( index ) {
-if( $(this).is(':empty') ) { $(this).append('<img src="http://images.amazon.com/images/P/0439166233.01.TZZZZZZZ.jpg" alt="" class="item-thumbnail otherclass">');  }
-});
 
 });
 
