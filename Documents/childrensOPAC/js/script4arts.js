@@ -361,7 +361,7 @@ if (window.location.href.indexOf("http://cl.fourarts.bywatersolutions.com/#serie
      $("#moresearches li:eq(2) a").removeClass("active_menu");
 
   $("#moresearches li:eq(1) a").addClass("active_menu");
-  $('#categories').fadeOut('slow', function(){
+  $('#categories').fadeOut('fast', function(){
       $('#series').fadeIn('slow');
       $('#popular').fadeOut('slow');
 
@@ -372,7 +372,7 @@ if (window.location.href.indexOf("http://cl.fourarts.bywatersolutions.com/#popul
   $("#moresearches li:eq(2) a").addClass("active_menu");
       $("#moresearches li:eq(1) a").removeClass("active_menu");
  $("#moresearches li:eq(0) a").removeClass("active_menu");
-   $('#categories').fadeOut('slow', function(){
+   $('#categories').fadeOut('fast', function(){
         $('#popular').fadeIn('slow');
        $('#series').fadeOut('slow');
 
