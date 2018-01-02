@@ -352,7 +352,32 @@ $("#opac-detail #moresearches #categories_link").attr("href", "http://michael.te
 $("#opac-lists #moresearches #categories_link").attr("href", "http://michael.test.bywatersolutions.com");
 
 /*JS for categories */
+$("#results #series_link").attr("href", "http://cl.fourarts.bywatersolutions.com#series");
 
+$("#results #popular_link").attr("href", "http://cl.fourarts.bywatersolutions.com#popular");
+
+if (window.location.href.indexOf("http://cl.fourarts.bywatersolutions.com/#series") > -1) {
+  $("#moresearches li:eq(0) a").removeClass("active_menu");
+     $("#moresearches li:eq(2) a").removeClass("active_menu");
+
+  $("#moresearches li:eq(1) a").addClass("active_menu");
+  $('#categories').fadeOut('slow', function(){
+      $('#series').fadeIn('slow');
+      $('#popular').fadeOut('slow');
+
+});
+}
+
+if (window.location.href.indexOf("http://cl.fourarts.bywatersolutions.com/#popular") > -1) {
+  $("#moresearches li:eq(2) a").addClass("active_menu");
+      $("#moresearches li:eq(1) a").removeClass("active_menu");
+ $("#moresearches li:eq(0) a").removeClass("active_menu");
+   $('#categories').fadeOut('slow', function(){
+        $('#popular').fadeIn('slow');
+       $('#series').fadeOut('slow');
+
+   });
+}
 
 
   $('#series_link').click(function(e){
