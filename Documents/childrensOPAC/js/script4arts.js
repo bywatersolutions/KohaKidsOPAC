@@ -611,7 +611,7 @@ $('#categories section').each(function(){
   });
 
   $('#categories .carousel__box a').each(function(){
-     parent = $(this).parent();  category = $(parent).find('h2').text(); console.log(category); $(this).attr('href', "/cgi-bin/koha/opac-search.pl?idx=kw&op=and&idx=kw&q=&op=and&idx=kw&q=&do=Search&q=" + category);
+     parent = $(this).parent();  category = $(parent).find('h2').text(); console.log(category); $(this).attr('href', "/cgi-bin/koha/opac-search.pl?idx=kw&op=and&idx=kw&q=&op=and&idx=kw&q=&do=Search&q=&branch_group_limit=branch%3ASOFACL" + category);
   });
 
 
