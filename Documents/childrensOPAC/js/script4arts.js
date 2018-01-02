@@ -1,5 +1,8 @@
 
 $(window).load(function() {
+
+
+
 $( '[id^=gbs-thumbnail]').each(function( index ) {
 $(this).addClass('google-books');
 });
@@ -33,6 +36,8 @@ $( '.google-books').each(function( index ) { if ( $(this).children('.no-image').
 });
 
 $(document).ready(function() {
+
+$("#moresearches li a:contains('Advanced search')").hide();
 
 $(".pagination").after("<section id='fiction_controls'><span id='normal' class=' control_button fiction_button'><a href=''>Fiction</a></span><span id='normal' class='control_button nonfiction_button'><a href=''>Non-Fiction</a></span></section>")
 
