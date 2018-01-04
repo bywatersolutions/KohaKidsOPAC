@@ -1,5 +1,24 @@
+$(document).ready(function) {
+
+  $(".series_books a").attr('data-type', 'page-transition');
+  $(".series_books img").wrap('<div class="image_overlay">');
+  $(".series_books img").append('<div class="after"></div>');
+  $(".series_books h2").addClass('overlay_series');
+  $('.series_books a').attr('href', '/cgi-bin/koha/opac-search.pl?idx=kw&branch_group_limit=branch%3ASOFACL&q=');
+
+  $( '.series_books section a').each(function( index ) {
+
+  parent = $(this).parent(); title = $(parent).find('h2').text(); console.log(title);
+
+  $(this).attr('href', "http://cl.fourarts.bywatersolutions.com/cgi-bin/koha/opac-search.pl?idx=kw&op=and&idx=kw&q=&op=and&idx=kw&q=&do=Search&branch_group_limit=branch%3ASOFACL&q=" + title);
+
+  });
+
+});
+
 
 $(window).load(function() {
+
 
 
 
